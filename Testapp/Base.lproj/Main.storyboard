@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12106.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12074.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Testapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +20,64 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simpel Beregner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GK-9g-dvA">
+                                <rect key="frame" x="124" y="80" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OEh-Vf-JS6">
+                                <rect key="frame" x="122.5" y="158" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="zRY-gi-CHO"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NIs-sy-ye3">
+                                <rect key="frame" x="122.5" y="219" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="KN0-k8-6NW"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uhm-R2-EKD">
+                                <rect key="frame" x="163" y="285" width="49" height="30"/>
+                                <state key="normal" title="Beregn"/>
+                                <connections>
+                                    <action selector="Buttonpushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yby-39-UH8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Svaret kommer her " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RP8-hC-vXV">
+                                <rect key="frame" x="112.5" y="369" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2GK-9g-dvA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6X2-Vg-eKJ"/>
+                            <constraint firstItem="NIs-sy-ye3" firstAttribute="top" secondItem="OEh-Vf-JS6" secondAttribute="bottom" constant="31" id="OAr-zi-6mV"/>
+                            <constraint firstItem="NIs-sy-ye3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R3J-7i-x36"/>
+                            <constraint firstItem="2GK-9g-dvA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="WQr-c2-AGr"/>
+                            <constraint firstItem="Uhm-R2-EKD" firstAttribute="top" secondItem="NIs-sy-ye3" secondAttribute="bottom" constant="36" id="aTl-wD-RVN"/>
+                            <constraint firstItem="OEh-Vf-JS6" firstAttribute="top" secondItem="2GK-9g-dvA" secondAttribute="bottom" constant="57" id="bDA-7F-sTX"/>
+                            <constraint firstItem="OEh-Vf-JS6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hkT-c5-8C7"/>
+                            <constraint firstItem="RP8-hC-vXV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jV4-We-k9T"/>
+                            <constraint firstItem="Uhm-R2-EKD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vxi-gM-weR"/>
+                            <constraint firstItem="RP8-hC-vXV" firstAttribute="top" secondItem="Uhm-R2-EKD" secondAttribute="bottom" constant="54" id="yMy-hf-gYH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Labeltext3" destination="RP8-hC-vXV" id="OxZ-B6-wTO"/>
+                        <outlet property="TextBox1" destination="OEh-Vf-JS6" id="SzH-61-fHS"/>
+                        <outlet property="TextBox2" destination="NIs-sy-ye3" id="eCn-eF-Brc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
